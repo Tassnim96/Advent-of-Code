@@ -2,31 +2,27 @@
 
 ################################################## Day 1
 with open('D:/adventofcode2022/day1.txt', 'r') as file:
-    input_lines = file.read().splitlines()
+    elves = file.read().splitlines()
     
-nb_cal=0
-elves_cal=[]    
+nbcal=0
+elvescal=[]    
 
-for i in input_lines :
+for i in elves :
     if i=="":
-        elves_cal.append(nb_cal)
-        nb_cal=0
+        elvescal.append(nbcal)
+        nbcal=0
     else:
-        nb_cal+=int(i)
-elves_cal.append(nb_cal)
-    
-  
-max_cal=max(elves_cal)    
-elfnb=elves_cal.index(max_cal)+1
+        nbcal+=int(i)
+elvescal.append(nbcal)
+maxcal=max(elvescal)    
     
 
-print("Total Calories carried by the Elf with the most Calories:", max_cal,"elf ist nb",elfnb)
+print("Total Calories carried by the Elf with the most Calories:", maxcal)
 
 
 #part 2 
-elves_cal=sorted(elves_cal) 
-maxthree= sum(elves_cal[-3:])
-t=elves_cal[-3:]
+elvescal=sorted(elvescal) 
+maxthree= sum(elvescal[-3:])
 print("Total Calories carried by the 3 Elves with the most Calories:", maxthree)
 
 
