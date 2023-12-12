@@ -205,6 +205,28 @@ for i in range(1,len(dicc)+1):
     print(dicc[i][-1],end="")
 
 
+######################################################### 6
+
+with open('D:/adventofcode2022/day6.txt', 'r') as file:
+    codemsg = file.read()
+  
+for i in range(0,len(codemsg)-3) :
+    if len(set(codemsg[i:i+4]))==4:
+        print( i+4)
+        break
+
+
+############################## part 2
+
+with open('D:/adventofcode2022/day6.txt', 'r') as file:
+    codemsg = file.read()
+  
+for i in range(0,len(codemsg)-3) :
+    if len(set(codemsg[i:i+14]))==14:
+        print( i+14)
+        break
+
+
 
 
 
